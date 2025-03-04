@@ -84,37 +84,47 @@ const Header = () => {
       </header>
 
       {(isSignInOpen || isSignUpOpen) && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50">
           {isSignInOpen && (
             <div className="bg-white p-6 rounded-lg shadow-lg w-[350px] h-[413px] text-center relative">
               <div className="mt-6">
-                <h2 className="text-2xl font-bold mb-2 flex justify-normal">Sign In</h2>
+                <h2 className="text-2xl text-black font-bold mb-2 flex justify-normal">Sign In</h2>
                 <p className="flex justify-normal text-gray-400 mb-4">Malesuada egestas nunc vestibulum</p>
               </div>
               <form onSubmit={handleSignIn}>
                 <div className="mt-10">
-                <h1 className="flex justify-normal text-[#1C1C1C]">Your email</h1>
+                <h1 className="flex justify-normal font-semibold text-[#1C1C1C]">Your email</h1>
                 <input type="email" name="email" placeholder="Email" onChange={handleChange} required className="border border-[#1C1C1C] px-4 py-2 w-full mb-2" />
-                <h1 className="flex justify-normal text-[#1C1C1C]">Your password</h1>
+                <h1 className="flex justify-normal font-semibold text-[#1C1C1C]">Your password</h1>
                 <div className="relative full">
                   <input type={showPassword ? "text" : "password"} name="password" placeholder="Password" onChange={handleChange} required className="border border-[#1C1C1C] px-4 py-2 w-full mb-2" />
                   <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute inset-y-0 -mt-2 right-3 flex items-center text-gray-500 hover:text-black">{showPassword ? <EyeOff /> : <Eye />}</button>
                 </div>
-                <button type="submit" className="bg-black border rounded-lg text-white px-4 py-2 w-full h-[51px] hover:bg-gray-800">Sign in</button>
+                <button type="submit" className="bg-black border rounded-lg mt-4 text-white px-4 py-2 w-full h-[51px]">Sign in</button>
                 </div>
               </form>
             </div>
           )}
 
           {isSignUpOpen && (
-            <div className="bg-white p-6 rounded-lg shadow-lg w-96 text-center relative">
-              <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
+            <div className="bg-white p-6 rounded-lg shadow-lg w-[350px] text-center relative">
+              <div className="mt-6">
+                <h2 className="text-2xl text-black font-bold mb-4 flex justify-normal">Sign Up</h2>
+                <p className="flex justify-normal text-gray-400 mb-4">Malesuada egestas nunc vestibulum</p>
+              </div>
               <form onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Name" onChange={handleChange} required className="border px-4 py-2 w-full mb-2" />
-                <input type="email" name="email" placeholder="Email" onChange={handleChange} required className="border px-4 py-2 w-full mb-2" />
-                <input type={showPassword ? "text" : "password"} name="password" placeholder="Password" onChange={handleChange} required className="border px-4 py-2 w-full mb-2" />
-                <button type="button" onClick={() => setShowPassword(!showPassword)} className="text-gray-500 hover:text-black">{showPassword ? <EyeOff /> : <Eye />}</button>
-                <button type="submit" className="bg-black text-white px-4 py-2 w-full hover:bg-gray-800">Sign up</button>
+                <div className="mt-10">
+                <h1 className="flex justify-normal font-semibold text-[#1C1C1C]">Your Name</h1>
+                <input type="text" name="name" placeholder="Name" onChange={handleChange} required className="border border-[#1C1C1C] px-4 py-2 w-full mb-2" />
+                <h1 className="flex justify-normal font-semibold text-[#1C1C1C]">Your Email</h1>
+                <input type="email" name="email" placeholder="Email" onChange={handleChange} required className="border border-[#1C1C1C] px-4 py-2 w-full mb-2" />
+                <h1 className="flex justify-normal font-semibold text-[#1C1C1C]">Your Password</h1>
+                <div className="relative full">
+                <input type={showPassword ? "text" : "password"} name="password" placeholder="Password" onChange={handleChange} required className="border border-[#1C1C1C] px-4 py-2 w-full mb-2" />
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute inset-y-0 -mt-2 right-3 flex items-center text-gray-500 hover:text-black">{showPassword ? <EyeOff /> : <Eye />}</button>
+                </div>
+                </div>
+                <button type="submit" className="bg-black mt-4 rounded-lg text-white px-4 py-2 w-full">Sign up</button>
               </form>
             </div>
           )}
