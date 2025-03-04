@@ -60,50 +60,50 @@ const Home = () => {
   const currentArticles = filteredArticles.slice(indexOfFirstArticle, indexOfLastArticle);
 
   return (
-    <div className={`p-4 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-[#f2f2f2] text-black"}`}>
+    <div className={`p-4 ${theme === "dark" ? "text-white" : " text-black"}`}>
       <div className="container mx-auto max-w-5xl py-4 px-6 flex justify-between items-center">
         <h1 className="font-bold text-xl"><img src="public/Articles.png" alt="img" className="h-[29px] w-[188px]" /></h1>
-        <button className="flex justify-between border px-4 py-2" onClick={() => setShowFilters(!showFilters)}>
+        <button className="flex justify-between border border-black px-4 py-2" onClick={() => setShowFilters(!showFilters)}>
           <img src="public/Frame.svg" alt="" /> {showFilters ? "Hide Filters" : "Show Filters"}
         </button>
       </div>
 
       {showFilters && (
-        <div className="container mx-auto max-w-5xl mt-4 p-4 grid grid-cols-4 gap-4">
+        <div className="container flex justify-between mx-auto max-w-5xl mt-4 p-4 gap-4">
           <div className="relative w-full">
-            <input type="text" placeholder="Search..." className="border border-gray-400 px-4 py-2 w-full rounded-md pr-10" onChange={(e) => setSearchTerm(e.target.value)} />
+            <input type="text" placeholder="Search..." className="border border-black px-4 py-2 pr-10 w-[490px] h-[52px] " onChange={(e) => setSearchTerm(e.target.value)} />
             <span className="absolute top-2 right-3 text-gray-500">
-              <Search size={20} />
+              <Search size={20} className="text-black mt-2" />
             </span>
           </div>
-          <select className="border p-2" onChange={(e) => setCategory(e.target.value)}>
+          <select className="border border-black p-2 w-[170px]" onChange={(e) => setCategory(e.target.value)}>
             <option value="">All Categories</option>
             <option value="Technology">Technology</option>
             <option value="Sports">Sports</option>
           </select>
-          <input type="text" placeholder="Source..." className="border p-2" onChange={(e) => setSource(e.target.value)} />
-          <input type="date" className="border p-2" onChange={(e) => setDate(e.target.value)} />
+          <input type="text" placeholder="Source..." className="border border-black p-2 w-[170px]" onChange={(e) => setSource(e.target.value)} />
+          <input type="date" className="border border-black p-2 w-[170px]" onChange={(e) => setDate(e.target.value)} />
         </div>
       )}
 
       <div className="container mx-auto max-w-5xl grid grid-cols-3 gap-6 mt-6">
         {currentArticles.map((article, index) => (
-          <div key={index} className="border overflow-hidden shadow-lg">
+          <div key={index}>
             <div className="relative w-full">
-              <img src={article.urlToImage || "/placeholder.jpg"} alt="Notícia" className="w-full object-cover border-2 border-black h-[315px]" />
+              <img src={article.urlToImage || "/placeholder.jpg"} alt="News" className="w-full object-cover border-2 border-black h-[315px]" />
             </div>
 
             <div className="p-4">
-              <h3 className="font-semibold">{article.title}</h3>
+              <h3 className="font-semibold w-[330px] -ml-3">{article.title}</h3>
 
-              <hr className="border-t border border-black my-4" />
-              <div className="flex justify-between mt-4">
+              <hr className="border-t border w-[320px] flex justify-between -ml-3 border-black my-4" />
+              <div className="flex justify-between mt-1">
                 <p className="text-sm text-gray-500">{article.source.name} - {new Date(article.publishedAt).toLocaleDateString()}</p>
                 <button 
                   className="text-blue-500 block" 
                   onClick={() => navigate("/details", { state: { article } })}
                 >
-                  Leia mais →
+                  more →
                 </button>
               </div>
             </div>
@@ -111,13 +111,13 @@ const Home = () => {
         ))}
       </div>
 
-      <div className={`p-4 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-[#f2f2f2] text-black"}`}>
+      <div className={`p-4 ${theme === "dark" ? "text-white" : " text-black"}`}>
         <div className="flex justify-center items-center space-x-4 mt-6">
-          <button onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))} className="p-2 border hover:bg-gray-300">
+          <button onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))} className="p-2 border">
             <ChevronLeft size={24} />
           </button>
           <span className="text-lg">{currentPage}</span>
-          <button onClick={() => setCurrentPage(prev => (indexOfLastArticle < filteredArticles.length ? prev + 1 : prev))} className="p-2 border hover:bg-gray-300">
+          <button onClick={() => setCurrentPage(prev => (indexOfLastArticle < filteredArticles.length ? prev + 1 : prev))} className="p-2 border">
             <ChevronRight size={24} />
           </button>
         </div>
