@@ -1,4 +1,4 @@
-import { useContext } from "react"; // Adicione esta linha
+import { useContext } from "react";
 import { ArrowRight } from "lucide-react";
 import { ThemeContext } from "../ThemeContext";
 
