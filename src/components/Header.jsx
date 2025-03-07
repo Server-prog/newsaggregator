@@ -12,7 +12,7 @@ const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false); // Estado para abrir/fechar o menu mobile
 
-  
+
   const [showPassword, setShowPassword] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [isSignInOpen, setIsSignInOpen] = useState(false);

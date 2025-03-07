@@ -29,7 +29,7 @@ const About = () => {
       <div className="max-w-4xl mx-auto px-6 py-12 font-mono">
         <div>
         <motion.div
-            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+            className="p-6 rounded-2xl text-center"
             initial={{ opacity: 0, y: 100 }} // Começa invisível e mais abaixo
             whileInView={{ opacity: 1, y: 0 }} // Aparece e sobe suavemente
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -48,7 +48,7 @@ const About = () => {
         
         <div className="mt-20 px-4">
           <motion.div
-            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+            className="bg-white p-6 rounded-2xl text-center"
             initial={{ opacity: 0, y: 100 }} // Começa invisível e mais abaixo
             whileInView={{ opacity: 1, y: 0 }} // Aparece e sobe suavemente
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,7 +78,7 @@ const About = () => {
 
         <div className="mt-20 px-4">
         <motion.div
-            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+            className=" p-6 rounded-2xl text-center"
             initial={{ opacity: 0, y: 100 }} // Começa invisível e mais abaixo
             whileInView={{ opacity: 1, y: 0 }} // Aparece e sobe suavemente
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -107,7 +107,7 @@ const About = () => {
 
         <div className="mt-20 px-4">
         <motion.div
-            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+            className=" p-6 rounded-2xl text-center"
             initial={{ opacity: 0, y: 100 }} // Começa invisível e mais abaixo
             whileInView={{ opacity: 1, y: 0 }} // Aparece e sobe suavemente
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -137,7 +137,6 @@ const About = () => {
           </motion.div>
         </div>
 
-        <div className={`${theme === "dark" ? "text-white" : "border-b border-black"}`}>
         <div className="h-screen flex items-center justify-center">
         <div className="relative w-[500px] h-[300px]" onClick={handleNextPaper}>
         {papers.map((paper, index) => (
@@ -166,7 +165,6 @@ const About = () => {
       </div>
     </div>
       </div>
-    </div>
   );
 };
 
