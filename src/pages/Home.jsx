@@ -35,7 +35,7 @@ const Home = () => {
     fetchNews();
     const interval = setInterval(fetchNews, 300000);
     return () => clearInterval(interval);
-  }, []);
+  },);
 
   useEffect(() => {
     let filtered = articles;

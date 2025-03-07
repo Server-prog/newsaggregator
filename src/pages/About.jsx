@@ -137,8 +137,9 @@ const About = () => {
           </motion.div>
         </div>
 
-        <div className="h-screen flex items-center justify-center bg-white">
-      <div className="relative w-[500px] h-[300px]" onClick={handleNextPaper}>
+        <div className={`${theme === "dark" ? "text-white" : "border-b border-black"}`}>
+        <div className="h-screen flex items-center justify-center">
+        <div className="relative w-[500px] h-[300px]" onClick={handleNextPaper}>
         {papers.map((paper, index) => (
           <motion.div
             key={paper.id}
@@ -161,11 +162,10 @@ const About = () => {
             <p className="text-sm mt-2">{paper.text}</p>
           </motion.div>
         ))}
+        </div>
       </div>
     </div>
-
       </div>
-
     </div>
   );
 };
