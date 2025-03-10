@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const papers = [
-  { id: 1, title: "Subheading one", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat." },
-  { id: 2, title: "Subheading two", text: "Outra descrição interessante para a segunda folha, com informações adicionais." },
-  { id: 3, title: "Subheading three", text: "Mais uma folha com detalhes e informações que podem ser úteis." },
-  { id: 4, title: "Subheading four", text: "Última folha da pilha, contendo um resumo final." },
+  { id: 1, title: " Lucas M. - 27 anos", text: "I really like the design of the website! The interface is clean and pleasant, and I can find the news quickly. The dark mode is a great feature!" },
+  { id: 2, title: "Mariana S. - 34 years old", text: "The real-time updates of football news are excellent! As I am passionate about the status, I found it very practical to follow the news without having to refresh the page." },
+  { id: 3, title: "Ricardo T. - 22 anos", text: "O site é rápido e responsivo. Testei tanto no celular quanto no computador e funcionou perfeitamente. Além disso, a categorização das notícias facilita muito a navegação." },
+  { id: 4, title: "Camila R. - 29 anos", text: "Acho que o News Aggregator tem um grande potencial! As fontes de notícias são confiáveis e sempre bem atualizadas. O botão de alternância entre modo claro e escuro é um toque especial." },
 ];
 const About = () => {
 
@@ -29,7 +29,7 @@ const About = () => {
       <div className="max-w-4xl mx-auto px-6 py-12 font-mono">
         <div>
         <motion.div
-            className="p-6 rounded-2xl text-center"
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
             initial={{ opacity: 0, y: 100 }} // Começa invisível e mais abaixo
             whileInView={{ opacity: 1, y: 0 }} // Aparece e sobe suavemente
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -48,7 +48,7 @@ const About = () => {
         
         <div className="mt-20 px-4">
           <motion.div
-            className="bg-white p-6 rounded-2xl text-center"
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
             initial={{ opacity: 0, y: 100 }} // Começa invisível e mais abaixo
             whileInView={{ opacity: 1, y: 0 }} // Aparece e sobe suavemente
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,7 +78,7 @@ const About = () => {
 
         <div className="mt-20 px-4">
         <motion.div
-            className=" p-6 rounded-2xl text-center"
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
             initial={{ opacity: 0, y: 100 }} // Começa invisível e mais abaixo
             whileInView={{ opacity: 1, y: 0 }} // Aparece e sobe suavemente
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -107,7 +107,7 @@ const About = () => {
 
         <div className="mt-20 px-4">
         <motion.div
-            className=" p-6 rounded-2xl text-center"
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
             initial={{ opacity: 0, y: 100 }} // Começa invisível e mais abaixo
             whileInView={{ opacity: 1, y: 0 }} // Aparece e sobe suavemente
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -137,6 +137,7 @@ const About = () => {
           </motion.div>
         </div>
 
+        <div className={`${theme === "dark" ? "text-white" : "border-b border-black"}`}>
         <div className="h-screen flex items-center justify-center">
         <div className="relative w-[500px] h-[300px]" onClick={handleNextPaper}>
         {papers.map((paper, index) => (
@@ -165,6 +166,7 @@ const About = () => {
       </div>
     </div>
       </div>
+    </div>
   );
 };
 

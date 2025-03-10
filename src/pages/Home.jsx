@@ -147,7 +147,6 @@ const Home = () => {
       </div>
       </motion.div>
 
-
       <div className={`p-4 ${theme === "dark" ? "text-white" : " text-black"}`}>
         <div className="flex justify-center items-center space-x-4 mt-6">
           <button onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))} className="p-2 border">
