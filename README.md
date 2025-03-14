@@ -1,6 +1,8 @@
-# React + Vite
+# Agregador de noticias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+É um artigo que passa informações em tempo real, as noticias são atualizados depois de 24hrs.
+
+Foi um desafio que eu lancei para mim mesmo para melhorar a minha habilidade como dev Frontend.
 
 Currently, two official plugins are available:
 
