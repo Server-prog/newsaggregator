@@ -2,6 +2,8 @@
 
 É um artigo que passa informações em tempo real, as noticias são atualizados depois de 24hrs.
 
+O link não esta disponivel, mas podes fazer o clone do projeto e testa-la.
+
 Foi um desafio que eu lancei para mim mesmo para melhorar a minha habilidade como dev Frontend.
 
 Currently, two official plugins are available:
