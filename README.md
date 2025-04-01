@@ -6,6 +6,20 @@ O link não esta disponivel, mas podes fazer o clone do projeto e testa-la.
 
 Foi um desafio que eu lancei para mim mesmo para melhorar a minha habilidade como dev Frontend.
 
+Tecnologias:
+
+## ReactJs 
+
+## Axios
+
+## Framer Motion
+
+Funcionalidades:
+
+## Dark e Light mode: apliquei alguns conceitos sobre o useContext, useEffect...
+
+## News.org: a API que usei para exibir as notícias em tempo real.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
